@@ -1,0 +1,162 @@
+:root {
+    --bg: #f9f9f7;        /* Soft off-white */
+    --text: #1a1a1a;     /* Deep charcoal */
+    --accent: #2563eb;   /* Professional Blue */
+    --border: #e5e5e1;   /* Subtle divider color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Navigation */
+nav {
+    padding: 40px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+    letter-spacing: -1px;
+}
+
+.brand span { color: var(--accent); }
+
+.nav-right a {
+    text-decoration: none;
+    color: var(--text);
+    margin-left: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.link-alt {
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 2px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 0 150px;
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #888;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.1;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+h1 i { font-weight: 400; }
+
+.sub-lead {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Interests - The "Professional List" Look */
+.interests {
+    padding-bottom: 100px;
+}
+
+.section-heading {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #888;
+}
+
+.interest-item {
+    display: flex;
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+}
+
+.year {
+    flex: 0 0 100px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.text p {
+    max-width: 600px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    padding: 100px 0 60px;
+    background-color: #fff;
+    border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-label { font-size: 0.8rem; color: #888; margin-bottom: 10px; }
+
+.footer-email {
+    font-size: 2rem;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text);
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .interest-item { flex-direction: column; }
+    .year { margin-bottom: 10px; }
+    .footer-grid { flex-direction: column; align-items: flex-start; gap: 40px; }
+}
